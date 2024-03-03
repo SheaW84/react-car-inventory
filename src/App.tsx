@@ -1,11 +1,10 @@
-
-
+import Home from "./pages/Home"
 function App() {
 
   return (
     <>
       <div>
-        <h1>Car Inventory</h1>
+        <Home />
       </div>
     </>
   )
