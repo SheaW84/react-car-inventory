@@ -6,7 +6,7 @@ function App() {
 
   return (
    <HashRouter>
-    /*TODO: make Navbar */
+    <Navbar/>
       <Routes>
         { routes.map((route: any, index: any) => (
           <Route
