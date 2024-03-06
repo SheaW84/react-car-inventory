@@ -1,9 +1,12 @@
-import React from 'react'
+import { useState } from "react"
+import DataTable from "../components/DataTable"
+
 
 const Dashboard = () => {
   return (
     <div>
-        Dashboard
+      <DataTable/>
+
     </div>
   )
 }
