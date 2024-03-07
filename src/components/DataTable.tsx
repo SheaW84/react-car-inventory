@@ -27,10 +27,10 @@ const rows = [
 function DataTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
-        <TableHead>
+      <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table" className='border'>
+        <TableHead className='bg-gray-600'>
           <TableRow>
-            <TableCell>Vehicle Make</TableCell>
+            <TableCell >Vehicle Make</TableCell>
             <TableCell align="right">Model</TableCell>
             <TableCell align="right">Year</TableCell>
             <TableCell align="right">Category</TableCell>
@@ -41,6 +41,7 @@ function DataTable() {
             <TableRow
               key={row.make}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              className='hover:bg-gray-400'
             >
               <TableCell component="th" scope="row">
                 {row.make}
