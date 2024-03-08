@@ -6,6 +6,7 @@ interface RouteType {
     path: string,
     component: ()=> JSX.Element,
     name: String
+    protected: boolean
 }
 
 const routes: RouteType[]= [
@@ -13,16 +14,19 @@ const routes: RouteType[]= [
         path: "",
         component: Home,
         name: "Home Screen",
+        protected: false,
     },
     {
         path: "/about",
         component: About,
         name: "About",
+        protected: false,
     },
     {
         path: "/dashboard",
         component: Dashboard,
         name: "Dashboard",
+        protected: true,
     }
 ];
 
