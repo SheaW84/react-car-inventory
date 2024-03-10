@@ -1,4 +1,5 @@
 const token ="3493914e95e6817b9d557fb7ca53a1f678d7ccfd6cb6b5bd"
+
 export const server_calls = {
     get: async () => {
         const response = await fetch (`https://carcollection-f0ki.onrender.com/api/cars`,
@@ -19,7 +20,7 @@ export const server_calls = {
         return await response.json()
     },
 
-    create: async (data: any = {})=>{
+    create: async (data: any = {}) => {
         const response = await fetch(`https://carcollection-f0ki.onrender.com/api/cars`,
         {
             method: 'POST',

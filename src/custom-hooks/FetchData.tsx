@@ -13,5 +13,5 @@ export const useGetData = () =>{
         handleDataFetch();
     },[])
 
-    return {  carData, getData:handleDataFetch}
+    return { carData, getData:handleDataFetch }
 }

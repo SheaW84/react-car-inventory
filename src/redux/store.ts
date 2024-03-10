@@ -1,9 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { reducer } from "./slices/RootSlice";
 
-const store = configureStore({
+export const store = configureStore({
     reducer,
-    devTools: true,
+    devTools: true
 })
-
-export default store;

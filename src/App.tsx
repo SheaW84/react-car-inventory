@@ -1,18 +1,26 @@
-import { HashRouter, Route, Routes, Link } from "react-router-dom"
+import { BrowserRouter, Route, Routes} from "react-router-dom"
 import routes from "./config/routes"
 import Navbar from "./components/Navbar"
 import AuthChecker from './auth/AuthChecker'
 import { Provider } from "react-redux"
-import store from "./redux/store"
+import { store } from "./redux/store"
+import { Auth0Provider } from "@auth0/auth0-react"
+import { auth0Config } from "./config/auth0.config"
 
 function App() {
-
   return (
-   <HashRouter>
+    <Auth0Provider
+      domain = {auth0Config.domain}
+      clientId={auth0Config.clientId}
+      authorizationParams={{
+        redirect_uri: window.location.origin
+      }}
+    >
+   <BrowserRouter>
     <Navbar/>
     <Provider store={store}>
       <Routes>
-        { routes.map((route: any, index: any) => (
+        { routes.map((route, index) => (
           <Route
             key={index}
             path={route.path}
@@ -30,7 +38,8 @@ function App() {
 
       </Routes>
     </Provider>
-   </HashRouter>
+   </BrowserRouter>
+   </Auth0Provider>
   )
 }
 

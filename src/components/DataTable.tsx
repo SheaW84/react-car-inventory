@@ -6,11 +6,11 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useGetData } from "../custom-hooks/FetchData";
 
 const columns: GridColDef[]=[
-  { field: 'id',headerName:'ID',width:90, hide:true},
-  { field: 'make', headerName:'Car Make', flex: 1},
-  { field: 'model', headerName: 'Car Model',flex:1},
-  { field: 'year', headerName: 'Car Year', flex: 1},
-  { field: 'car_type', headerName: 'Car Type',flex: 1}
+  { field: 'id', headerName:'ID', width:90, hide:true },
+  { field: 'make', headerName:'Car Make', flex: 1 },
+  { field: 'model', headerName: 'Car Model',flex: 1 },
+  { field: 'year', headerName: 'Car Year', flex: 1 },
+  { field: 'car_type', headerName: 'Car Type',flex: 1 }
 ]
 
 function DataTable() {
@@ -49,8 +49,8 @@ function DataTable() {
                     Create New Car
                 </button>
             </div> 
-            <Button onClick={handleOpen} className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" >Update</Button>
-            <Button onClick={deleteData} className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" >Delete</Button>
+            <Button onClick={ handleOpen } className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" >Update</Button>
+            <Button onClick={ deleteData } className="p-3 bg-slate-300 rounded m-3 hover:bg-slate-800 hover:text-white" >Delete</Button>
         </div>
         <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col"}
             style={{ height: 400, width: '100%'}}>
