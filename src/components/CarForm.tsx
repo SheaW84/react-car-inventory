@@ -1,4 +1,4 @@
-import { useSubmit } from "react-router-dom"
+
 import Button from "./Button"
 import Input from "./Input"
 
@@ -9,6 +9,7 @@ import { chooseMake, chooseModel, chooseYear, chooseCarType } from "../redux/sli
 
 interface CarFormProps {
     id?: string[],
+
 }
 
 const CarForm = (props: CarFormProps) => {
@@ -29,7 +30,7 @@ const CarForm = (props: CarFormProps) => {
             dispatch(chooseMake(data.make));
             dispatch(chooseModel(data.model));
             dispatch(chooseYear(data.year));
-            dispatch(chooseCarType(data.car_type));
+            dispatch(chooseCarType(data.type));
 
             server_calls.create(store.getState())
             setTimeout(() => {window.location.reload()}, 1000)
@@ -51,8 +52,8 @@ const CarForm = (props: CarFormProps) => {
                     <Input {...register('year')} name ='year' placeholder="Car Year"/>
                 </div>
                 <div>
-                    <label htmlFor="car_type">Car Type</label>
-                    <Input {...register('car_type')} name ='car_type' placeholder="Car Type"/>
+                    <label htmlFor="type">Car Type</label>
+                    <Input {...register('type')} name ='type' placeholder="Car Type"/>
                 </div>
                 <div className="flex p-1">
                     <Button className="flex justify-start m-3 bg-gray-600 p-2 rounded hover:bg-gray-800 text-white">

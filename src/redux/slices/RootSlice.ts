@@ -6,13 +6,13 @@ const rootSlice = createSlice({
         make: "Car Make",
         model: "Car Model",
         year: "Car Year",
-        car_type: "Car Type",
+        type: "Car Type",
     },
     reducers: {
         chooseMake: (state, action) => { state.make = action.payload},
         chooseModel: (state, action) => { state.model = action.payload},
         chooseYear: (state, action) => { state.year = action.payload},
-        chooseCarType: (state, action) => { state.car_type = action.payload},
+        chooseCarType: (state, action) => { state.type = action.payload},
     }
 })
 
