@@ -4,10 +4,10 @@ function Home() {
   return (
     <div 
       style={{ backgroundImage: `url(${ Background })`}} 
-      className='flex flex-row justify-center mx-auto bg-cover bg-fixed'
+      className='flex flex-row justify-center mx-auto bg-cover bg-fixed bg-slate-700 bg-blend-multiply'
       >
         <div className='flex place-items-center h-screen'>
-          <h3 className='p-5 bg-white bg-opacity-50 text-black border rounded'>Welcome To the Car Inventory</h3>
+          <h1 className='p-4 text-6xl text-white  font-display'>Welcome The Car Inventory</h1>
         </div>
     </div>
   )

@@ -9,7 +9,8 @@ export const server_calls = {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
                 'x-access-token': `Bearer ${token}`
-            }
+            },
+            mode: 'cors'
 
         });
 
@@ -49,7 +50,9 @@ export const server_calls = {
                 'Access-Control-Allow-Origin': '*',
                 'x-access-token': `Bearer ${token}`
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(data),
+            
+            
         })
 
         if (!response.ok){

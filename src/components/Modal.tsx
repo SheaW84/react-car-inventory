@@ -23,10 +23,10 @@ const Modal = ( props:Props) => {
             >
                 <div className="w-full flex flex-col">
                     <div className="flex flex-row space-apart">
-                        <p className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white"
+                        <button className="flex justify-start m-3 bg-slate-300 p-2 rounded hover:bg-slate-800 text-white"
                         onClick={props.onClose}>
-                            X
-                        </p>
+                            <span className="material-symbols-outlined">close</span>
+                        </button>
                     </div>
                     <div className="flex flex-col items-center text-center mt-3 p-2">
                         <CarForm id={ props.id } />
