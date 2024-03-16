@@ -4,7 +4,7 @@ import Modal from "./Modal";
 import { server_calls } from "../api/server";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useGetData } from "../custom-hooks/FetchData";
-import { CircularProgress } from "@mui/material";
+
 
 const columns: GridColDef[]=[
   { field: 'id', headerName:'ID', width:90, hide:true },
