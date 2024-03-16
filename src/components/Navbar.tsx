@@ -33,13 +33,13 @@ function Navbar() {
     <div className='block'>
         <button onClick={dropDown} className='flex place-items-end px-3 py-2 text-gray-200 border rounded 
         border-gray-400  hover:text-white hover:border-white transition ease-in-out 
-        delay-150 hover:translate-y-1 hover:scale-120'>
+        delay-150 hover:translate-y-1 hover:scale-120' data-dropdown-toggle="dropdown">
             <i className='fas fa-bars'></i>
         </button>
     </div>
     { isVisible ? (
-    <div className='w-full block flex-grow items-end'>
-        <div className="text-sm lg:flex-grow">
+    <div className='z-10 w-full flex-grow items-end'>
+        <div className="text-sm lg:flex-grow"> 
             <Button className='p-3 m-5'>
                 <div>
                     <Link to='/' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
@@ -48,7 +48,6 @@ function Navbar() {
                         <div>Home</div>
                     </Link>
                 </div>
-
             </Button>
             <Button className='p-3 m-5'>
                 <div>
@@ -59,7 +58,7 @@ function Navbar() {
                     </Link>
                 </div>
             </Button>
-            
+         
             <Button className='p-3 m-5'>
                 <div>
                     <Link to='/dashboard' onClick={clicked} className='flex place-items-center mt-4 lg:inline-block lg:mt-0 
@@ -70,7 +69,7 @@ function Navbar() {
                 </div>
             </Button>
             {
-                !isAuthenticated ?           
+                !isAuthenticated ?          
                 <Button className='p-3 m-5'>
                     <div>
                         <Link to='/' onClick={ ()=>{signInOnClick()}} className='flex place-items-center mt-4 lg:inline-block 
@@ -80,7 +79,7 @@ function Navbar() {
                             <div>Login</div>
                         </Link>
                     </div>
-                </Button>
+                </Button> 
                 :
                 <Button className='p-3 m-5'>
                     <div>
